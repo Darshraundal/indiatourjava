@@ -7,9 +7,11 @@ import javax.mail.MessagingException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.indiatour.etour.modal.Booking;
@@ -34,6 +36,24 @@ public class BookingController {
 	
 	@Autowired
 	Customerrepo custrepo;
+	
+	@PutMapping(value="/canceltour/{bookingid}")
+	public void setflag(@PathVariable int bookingid)
+	{
+		 bookservice.canceltours(bookingid);
+	}
+	
+	@GetMapping(value="/allcanceltours")
+	public List<Booking> getallcanceltour()
+	{
+		return bookrepo.findByflagone();
+	}
+	
+	@DeleteMapping(value="/tourdelete/{bookingid}")
+	public void deletetourbyid(@PathVariable int bookingid)
+	{
+		bookservice.deletetour(bookingid);
+	}
 	
 	//posting the data from pdf page
 	@PostMapping(value="/booking/", headers = "Accept=application/json")
@@ -76,5 +96,7 @@ public class BookingController {
 	{
 		return bookrepo.findBybookingid(customerid);
 	}
+	
+	
 
 }

@@ -38,32 +38,19 @@ public class BookingServiceImpl implements BookingService{
 		bookrepo.save(booking);
 		
 	}
-	//@EventListener(ApplicationReadyEvent.class) 
-	 public void triggerMail(int custid,int packid) 
-	   { 
-		   	LocalDate now=LocalDate.now();
-		    String newnow=now.toString();
-		     List<Booking> bookingdetails =bookrepo.findAll();
-		   //senderservice.sendSimpleEmail("darshanraundal55@gmail.com", "This is email body",  "This is email subject"); 
-		     for(Booking book:bookingdetails)
-		     {
-		    	 int pkgid=book.getPackageid();
-		    	 int cid=book.getCustomerid();
-		    	 String date=book.getBookingdate();
-		    	 if(cid==custid && date.equals(newnow) && pkgid==packid)
-		    	 {
-		    		Customer cust=custrepo.findBycustomercid(cid);
-		    		
-		    	 try {
-					senderservice.sendEmailWithAttachment(cust.getEmail(), "Your Booking Successful",
-							   "Invoice of booking", "C:\\Users\\ASUS\\Downloads\\Invoice"+custid+pkgid+newnow+".pdf");
-				} catch (MessagingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}  }
-		     }
-		    	 
-		 }
+
+	@Override
+	public void canceltours(int bookingid) {
+		// TODO Auto-generated method stub
+		bookrepo.setflag(bookingid);
+	}
+
+	@Override
+	public void deletetour(int bookingid) {
+		// TODO Auto-generated method stub
+		bookrepo.deleteById(bookingid);
+	}
+
 		  
 	
 	   //@EventListener(ApplicationReadyEvent.class) 

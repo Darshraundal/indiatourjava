@@ -34,6 +34,9 @@ public class Booking {
 	@Column(name="Totalamount")
 	private double totalfinalcost;
 	
+	@Column(name="Flag")
+	private int flag;
+	
 	
 	public int getBookingid() {
 		return bookingid;
