@@ -52,7 +52,7 @@ CREATE TABLE `passanger` (
 
 LOCK TABLES `passanger` WRITE;
 /*!40000 ALTER TABLE `passanger` DISABLE KEYS */;
-INSERT INTO `passanger` VALUES (123,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,NULL,'2021-03-02','Male','Nashik','Maharashtra',33,6,102000,422010,NULL,1),(124,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,NULL,'2021-03-11','Male','Nashik','Maharashtra',33,6,100000,422010,NULL,1),(125,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789123','2021-03-30','Male','Nashik','Maharashtra',33,6,102000,422010,NULL,1),(126,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789124','2021-03-30','Male','Nashik','Maharashtra',34,6,102000,422003,NULL,1),(127,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789125','2021-03-01','Male','Nashik','Maharashtra',38,6,100000,422010,NULL,1),(131,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789456','2021-03-02','Male','Nashik','Maharashtra',9,6,92000,456123,NULL,1),(132,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789457','2021-03-11','Male','Nashik','Maharashtra',9,6,92000,422200,NULL,1);
+INSERT INTO `passanger` VALUES (134,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789753','2021-03-02','Male','Nashik','Maharashtra',1,6,97000,456789,NULL,1),(135,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789457','1991-06-04','Male','Nashik','Maharashtra',1,6,92000,422010,NULL,1),(136,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789124','1998-12-28','Male','Nashik','Maharashtra',61,6,26990,422010,NULL,1),(137,'DARSHAN','RAUNDAL','9422841267','Aishwarya Vihar,Ramehswar Nagar Kamtawada,',NULL,'123456789124','2021-03-23','Male','Nashik','Maharashtra',61,6,25200,422010,NULL,1);
 /*!40000 ALTER TABLE `passanger` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -65,4 +65,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-05 20:06:02
+-- Dump completed on 2022-04-12  9:20:37
